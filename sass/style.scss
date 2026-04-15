@@ -1,0 +1,378 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ctp-rosewater: #f5e0dc;
+  --ctp-flamingo: #f2cdcd;
+  --ctp-pink: #f5c2e7;
+  --ctp-mauve: #cba6f7;
+  --ctp-red: #f38ba8;
+  --ctp-maroon: #eba0ac;
+  --ctp-peach: #fab387;
+  --ctp-yellow: #f9e2af;
+  --ctp-green: #a6e3a1;
+  --ctp-teal: #94e2d5;
+  --ctp-sky: #89dceb;
+  --ctp-sapphire: #74c7ec;
+  --ctp-blue: #89b4fa;
+  --ctp-lavender: #b4befe;
+  --ctp-text: #cdd6f4;
+  --ctp-subtext1: #bac2de;
+  --ctp-subtext0: #a6adc8;
+  --ctp-overlay2: #9399b2;
+  --ctp-overlay1: #7f849c;
+  --ctp-overlay0: #6c7086;
+  --ctp-surface2: #585b70;
+  --ctp-surface1: #45475a;
+  --ctp-surface0: #313244;
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-crust: #11111b;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+body, p, a, li, span, div {
+  font-family: "MonoLisa", monospace;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4 {
+  font-family: "MonoLisa", monospace;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+body {
+  background: var(--ctp-base);
+  color: var(--ctp-text);
+  line-height: 1.7;
+  font-size: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--ctp-overlay1);
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--ctp-text);
+  }
+}
+
+.container {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  margin-bottom: 4rem;
+  flex: 1;
+  margin-top: 3rem;
+}
+
+header {
+  margin-bottom: 1.5rem;
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .site-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: -0.025em;
+      color: var(--ctp-mauve);
+      text-decoration: none;
+      margin-top: 1rem;
+
+      &:hover {
+        color: var(--ctp-pink);
+        text-decoration: none;
+      }
+
+      em {
+        font-style: italic;
+      }
+    }
+
+  .terminal-cursor {
+    animation: blink 1.2s infinite;
+    font-weight: 400;
+    position: relative;
+    top: -0.1em;
+    margin-left: 1px;
+    color: var(--ctp-overlay1);
+  }
+
+  .current-path {
+    font-size: 0.875rem;
+    color: var(--ctp-overlay1);
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.25rem;
+
+    a {
+      font-size: 0.875rem;
+      color: var(--ctp-overlay1);
+
+      &:hover {
+        color: var(--ctp-text);
+      }
+    }
+  }
+}
+
+main {
+  min-height: 60vh;
+  margin-top: 1.5rem;
+}
+
+.homepage {
+  .bio {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--ctp-subtext1);
+    margin-bottom: 2rem;
+
+    a {
+      color: var(--ctp-blue);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      &:hover {
+        color: var(--ctp-sapphire);
+      }
+    }
+  }
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-header {
+  margin-bottom: 0.75rem;
+
+  h2 {
+    font-size: 1.125rem;
+    font-style: italic;
+    color: var(--ctp-overlay2);
+  }
+}
+
+.experience-content {
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ctp-blue);
+    margin: 1.5rem 0 0.25rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: var(--ctp-overlay1);
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    li {
+      border-left: 2px solid var(--ctp-surface0);
+      padding-left: 0.75rem;
+      color: var(--ctp-subtext1);
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+.project-detail {
+  margin-bottom: 1.5rem;
+
+  .project-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ctp-mauve);
+    margin-bottom: 0.5rem;
+  }
+
+  .project-content {
+    border-left: 2px solid var(--ctp-surface0);
+    padding-left: 0.75rem;
+
+    p {
+      font-size: 0.875rem;
+      color: var(--ctp-subtext1);
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    strong {
+      color: var(--ctp-text);
+    }
+
+    a {
+      color: var(--ctp-blue);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      &:hover {
+        color: var(--ctp-sapphire);
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      li {
+        color: var(--ctp-subtext1);
+        font-size: 0.875rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+.skills-content {
+  p {
+    font-size: 0.875rem;
+    color: var(--ctp-subtext1);
+    margin-bottom: 0.5rem;
+    border-left: 2px solid var(--ctp-surface0);
+    padding-left: 0.75rem;
+  }
+
+  strong {
+    color: var(--ctp-overlay1);
+  }
+}
+
+.education-content {
+  p {
+    font-size: 0.875rem;
+    color: var(--ctp-subtext1);
+    margin-bottom: 0.5rem;
+    border-left: 2px solid var(--ctp-surface0);
+    padding-left: 0.75rem;
+    line-height: 1.5;
+  }
+
+  strong {
+    color: var(--ctp-text);
+  }
+}
+
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .skill-item {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    border-left: 2px solid var(--ctp-surface0);
+    padding-left: 0.75rem;
+  }
+
+  .skill-label {
+    color: var(--ctp-overlay1);
+    min-width: 100px;
+  }
+
+  .skill-value {
+    color: var(--ctp-subtext1);
+  }
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+
+  li {
+    border-left: 2px solid var(--ctp-surface0);
+    padding-left: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .edu-title {
+    color: var(--ctp-text);
+    display: block;
+  }
+
+  .edu-meta {
+    color: var(--ctp-overlay1);
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.15rem;
+  }
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ctp-surface0);
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--ctp-overlay1);
+
+  .contact {
+    color: var(--ctp-subtext1);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .site-title {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

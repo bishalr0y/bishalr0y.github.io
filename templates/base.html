@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <a href="/" class="site-title"><em>{{ config.title }}</em><span class="terminal-cursor">█</span></a>
+        <span class="current-path">{% block path %}~{% endblock path %}</span>
+      </div>
+      <nav>
+        <a href="https://github.com/{{ config.extra.github }}">github</a>
+        <a href="https://linkedin.com/in/{{ config.extra.linkedin }}">linkedin</a>
+        <a href="mailto:bishalroy895@gmail.com">email</a>
+      </nav>
+    </header>
+
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
+
+    <footer>
+      <span>&copy; {{ now() | date(format="%Y") }} {{ config.title }}</span>
+      <span class="contact">bishalroy895@gmail.com</span>
+    </footer>
+  </div>
+</body>
+</html>

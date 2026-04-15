@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block path %}~{% endblock %}
+
+{% block content %}
+<div class="homepage">
+  <div class="main-col">
+    <p class="bio">
+      {{ section.content | safe }}
+    </p>
+    
+    {% set experience_section = get_section(path="experience/_index.md") %}
+    {% if experience_section.content %}
+    <div class="section" style="margin-top: 2rem;">
+      <div class="section-header">
+        <h2># experience</h2>
+      </div>
+      <div class="experience-content">
+        {{ experience_section.content | safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% set projects_section = get_section(path="projects/_index.md") %}
+    {% if projects_section.pages %}
+    <div class="section">
+      <div class="section-header">
+        <h2># projects</h2>
+      </div>
+      {% for page in projects_section.pages %}
+      <div class="project-detail">
+        <h3 class="project-name">{{ page.title }}</h3>
+        <div class="project-content">
+          {{ page.content | safe }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% set skills_section = get_section(path="skills/_index.md") %}
+    {% if skills_section.content %}
+    <div class="section">
+      <div class="section-header">
+        <h2># skills</h2>
+      </div>
+      <div class="skills-content">
+        {{ skills_section.content | safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% set education_section = get_section(path="education/_index.md") %}
+    {% if education_section.content %}
+    <div class="section">
+      <div class="section-header">
+        <h2># education</h2>
+      </div>
+      <div class="education-content">
+        {{ education_section.content | safe }}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock content %}
