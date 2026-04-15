@@ -16,18 +16,14 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
 
       - name: Build Zola + upload Pages artifact
         uses: getzola/github-pages@v1
         with:
-          zola_version: '0.22.0'
+          zola_version: 'v0.22.0'
 
   deploy:
     needs: build
@@ -38,4 +34,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
