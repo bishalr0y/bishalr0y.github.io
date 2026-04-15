@@ -226,9 +226,6 @@ main {
   }
 
   .project-content {
-    border-left: 2px solid var(--ctp-surface0);
-    padding-left: 0.75rem;
-
     p {
       font-size: 0.875rem;
       color: var(--ctp-subtext1);
@@ -259,6 +256,8 @@ main {
       gap: 0.5rem;
 
       li {
+        border-left: 2px solid var(--ctp-surface0);
+        padding-left: 0.75rem;
         color: var(--ctp-subtext1);
         font-size: 0.875rem;
         line-height: 1.6;
