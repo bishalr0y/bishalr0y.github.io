@@ -3,12 +3,14 @@ title = "Skills"
 description = "Technical skills"
 +++
 
-**Languages:** Golang, JavaScript, TypeScript
-
-**Databases:** PostgreSQL, MongoDB
-
-**Cloud:** AWS
-
-**DevOps:** Docker, GitHub Actions
-
-**Tools:** Git, MQTT
+- Golang
+- JavaScript
+- TypeScript
+- PostgreSQL
+- MongoDB
+- AWS
+- Docker
+- GitHub Actions
+- Git
+- Neovim
+- MQTT
