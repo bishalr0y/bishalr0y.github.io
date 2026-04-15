@@ -1,0 +1,15 @@
+base_url = "https://bishalr0y.github.io"
+title = "Bishal Roy"
+description = "Software Engineer based in India"
+compile_sass = true
+build_search_index = false
+generate_feeds = false
+
+[markdown]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+github = "bishalr0y"
+linkedin = "bishalr0y"
