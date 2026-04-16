@@ -13,7 +13,7 @@
     {% if experience_section.content %}
     <div class="section" style="margin-top: 2rem;">
       <div class="section-header">
-        <h2># experience</h2>
+        <h2># experience<span class="section-cursor">_</span></h2>
       </div>
       <div class="experience-content">
         {{ experience_section.content | safe }}
@@ -25,7 +25,7 @@
     {% if projects_section.pages %}
     <div class="section">
       <div class="section-header">
-        <h2># projects</h2>
+        <h2># projects<span class="section-cursor">_</span></h2>
       </div>
       {% for page in projects_section.pages %}
       <div class="project-detail">
@@ -42,7 +42,7 @@
     {% if skills_section.content %}
     <div class="section">
       <div class="section-header">
-        <h2># skills</h2>
+        <h2># skills<span class="section-cursor">_</span></h2>
       </div>
       <div class="skills-content">
         {{ skills_section.content | safe }}
@@ -54,7 +54,7 @@
     {% if education_section.content %}
     <div class="section">
       <div class="section-header">
-        <h2># education</h2>
+        <h2># education<span class="section-cursor">_</span></h2>
       </div>
       <div class="education-content">
         {{ education_section.content | safe }}

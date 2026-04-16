@@ -46,6 +46,12 @@ html {
   }
 }
 
+.section-cursor {
+  animation: blink 1.2s infinite;
+  font-weight: 400;
+  color: var(--ctp-overlay1);
+}
+
 body, p, a, li, span, div {
   font-family: "MonoLisa", monospace;
   font-weight: 400;
@@ -101,12 +107,12 @@ header {
     font-weight: 700;
     line-height: 2.5rem;
     letter-spacing: -0.025em;
-      color: var(--ctp-mauve);
+      color: var(--ctp-maroon);
       text-decoration: none;
       margin-top: 1rem;
 
       &:hover {
-        color: var(--ctp-pink);
+        color: var(--ctp-red);
         text-decoration: none;
       }
 
@@ -139,7 +145,7 @@ header {
       color: var(--ctp-overlay1);
 
       &:hover {
-        color: var(--ctp-text);
+        color: var(--ctp-green);
       }
     }
   }
@@ -179,7 +185,7 @@ main {
   h2 {
     font-size: 1.125rem;
     font-style: italic;
-    color: var(--ctp-overlay2);
+    color: var(--ctp-lavender);
   }
 }
 
@@ -282,8 +288,8 @@ main {
     color: var(--ctp-subtext1);
     font-size: 0.9rem;
 
-    &::after {
-      content: " ·";
+    &::before {
+      content: "* ";
       color: var(--ctp-surface2);
     }
   }
