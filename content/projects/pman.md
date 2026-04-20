@@ -2,6 +2,8 @@
 title = "pman"
 description = "A process manager CLI tool"
 date = 2026-03-01
+[extra]
+github = "https://github.com/bishalr0y/pman"
 +++
 
 - Built a production-ready CLI tool in Go with TUI using Bubble Tea framework, featuring real-time process monitoring, Vim-style navigation, and process management (kill by PID/port).

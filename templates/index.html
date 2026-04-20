@@ -29,7 +29,12 @@
       </div>
       {% for page in projects_section.pages %}
       <div class="project-detail">
-        <h3 class="project-name">{{ page.title }}</h3>
+        <h3 class="project-name">
+          {{ page.title }}
+          {% if page.extra.github %}
+          <a href="{{ page.extra.github }}" class="project-github">[github]</a>
+          {% endif %}
+        </h3>
         <div class="project-content">
           {{ page.content | safe }}
         </div>
