@@ -6,6 +6,8 @@ date = 2026-03-01
 github = "https://github.com/bishalr0y/pman"
 +++
 
+[github](https://github.com/bishalr0y/pman)
+
 - Built a production-ready CLI tool in Go with TUI using Bubble Tea framework, featuring real-time process monitoring, Vim-style navigation, and process management (kill by PID/port).
 
 - Implemented cross-platform systems-level programming using gopsutil for network socket inspection, protocol detection (TCP/UDP), and process metadata extraction.

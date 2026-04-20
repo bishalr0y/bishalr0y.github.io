@@ -3,17 +3,27 @@ title = "Experience"
 description = "Work experience"
 +++
 
-**Software Engineer**
-Aiflux Innovations Pvt Ltd | August 2024 - Present
+**Software Engineer** <span class="company">@ Aiflux Innovations</span> | Aug 2024 - Present
 
-- Designed and developed a robust backend server for farmer data collection under FPO initiatives using Golang and PostgreSQL, with automated testing and CI/CD pipelines via GitHub Actions, deployed to AWS App Runner and Elastic Container Registry (ECR) with versioning managed through Google's Release Please.
-- Built and deployed a scalable backend platform using Node.js, TypeScript, and AWS RDS to support mushroom cultivation operations including multi-growhouse management and farmer coordination, integrating real-time environmental monitoring (temperature, humidity, CO2) through MQTT-enabled IoT sensors.
-- Implemented infrastructure and DevOps workflows, deploying the system to AWS EC2 and configuring custom DNS routing via Hostinger, ensuring reliable access and smooth environment monitoring for IoT-based agriculture management.
+- Architected Go + PostgreSQL backend for farmer data collection (FPO), deployed on AWS App Runner with CI/CD via GitHub Actions.
+- Built scalable Node.js/TypeScript platform for mushroom cultivation with real-time IoT monitoring (temperature, humidity, CO2) via MQTT sensors.
+- Deployed infrastructure on AWS EC2 with custom DNS routing through Hostinger.
 
-**Software Developer**
-Nav Prayukti Pvt Ltd | June 2023 - August 2024
+**Software Developer** <span class="company">@ Nav Prayukti</span> | Jun 2023 - Aug 2024
 
-- Developed a Go-based server designed to run on a Raspberry Pi, responsible for maintaining persistent communication between the local node server and a Node.js based web server hosted on AWS.
-- Developed a back-end server with Typescript and Node.js that uses MQTT to send commands to embedded systems and receive sensor data.
-- Developed and optimized CRUD operations using Node.js for sensor data in AWS RDS using Prisma ORM, enabling seamless and scalable data management.
-- Automated deployment of Node.js applications to Amazon EC2 using Docker Compose and GitHub Actions for CI/CD.
+- Developed Go server running on Raspberry Pi for persistent communication between local nodes and AWS web server.
+- Built TypeScript + Node.js backend using MQTT protocol for bidirectional embedded systems communication and sensor data handling.
+- Optimized CRUD operations in AWS RDS using Prisma ORM for seamless data management.
+- Automated deployment pipeline to EC2 using Docker Compose and GitHub Actions.
+
+**Software Developer Intern** <span class="company">@ Nav Prayukti</span> | Apr 2023 - Jun 2023
+
+- Built React.js frontend fetching and displaying API data in tabular format.
+- Configured PostgreSQL database container using Docker Compose with Node.js server integration.
+
+**Software Engineer Intern** <span class="company">@ BornBhukkad</span> | Jul 2021 - Mar 2022
+
+- Enhanced Django REST API with pagination for food search engine results.
+- Designed and implemented user search history storage API.
+- Developed filtering and sorting algorithms for accurate search results.
+- Scraped and populated restaurant data including menus, ratings, and discounts into SQL database using Selenium.
