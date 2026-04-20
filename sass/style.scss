@@ -5,32 +5,55 @@
 }
 
 :root {
-  --ctp-rosewater: #f5e0dc;
-  --ctp-flamingo: #f2cdcd;
-  --ctp-pink: #f5c2e7;
-  --ctp-mauve: #cba6f7;
-  --ctp-red: #f38ba8;
-  --ctp-maroon: #eba0ac;
-  --ctp-peach: #fab387;
-  --ctp-yellow: #f9e2af;
-  --ctp-green: #a6e3a1;
-  --ctp-teal: #94e2d5;
-  --ctp-sky: #89dceb;
-  --ctp-sapphire: #74c7ec;
-  --ctp-blue: #89b4fa;
-  --ctp-lavender: #b4befe;
-  --ctp-text: #cdd6f4;
-  --ctp-subtext1: #bac2de;
-  --ctp-subtext0: #a6adc8;
-  --ctp-overlay2: #9399b2;
-  --ctp-overlay1: #7f849c;
-  --ctp-overlay0: #6c7086;
-  --ctp-surface2: #4a5066;
-  --ctp-surface1: #3b4157;
-  --ctp-surface0: #2d3148;
-  --ctp-base: #23263a;
-  --ctp-mantle: #1e2030;
-  --ctp-crust: #181926;
+  --gray-1: #f5f5f5;
+  --gray-2: #e0e0e0;
+  --gray-3: #cccccc;
+  --gray-4: #a3a3a3;
+  --gray-5: #808080;
+  --gray-6: #666666;
+  --gray-7: #4d4d4d;
+  --gray-8: #333333;
+  --gray-9: #1a1a1a;
+  --gray-10: #0d0d0d;
+  --gray-11: #050505;
+  --gray-12: #000000;
+
+  --text: var(--gray-2);
+  --text-muted: var(--gray-4);
+  --text-dim: var(--gray-5);
+  --bg: var(--gray-10);
+  --bg-muted: var(--gray-9);
+  --bg-dim: var(--gray-8);
+  --border: var(--gray-7);
+  --link: var(--gray-3);
+  --link-hover: var(--gray-1);
+
+  --ctp-rosewater: var(--gray-2);
+  --ctp-flamingo: var(--gray-3);
+  --ctp-pink: var(--gray-4);
+  --ctp-mauve: var(--gray-3);
+  --ctp-red: var(--gray-5);
+  --ctp-maroon: var(--gray-3);
+  --ctp-peach: var(--gray-4);
+  --ctp-yellow: var(--gray-5);
+  --ctp-green: var(--gray-4);
+  --ctp-teal: var(--gray-5);
+  --ctp-sky: var(--gray-2);
+  --ctp-sapphire: var(--gray-3);
+  --ctp-blue: var(--gray-3);
+  --ctp-lavender: var(--gray-4);
+  --ctp-text: var(--gray-2);
+  --ctp-subtext1: var(--gray-4);
+  --ctp-subtext0: var(--gray-4);
+  --ctp-overlay2: var(--gray-5);
+  --ctp-overlay1: var(--gray-6);
+  --ctp-overlay0: var(--gray-7);
+  --ctp-surface2: var(--gray-8);
+  --ctp-surface1: var(--gray-9);
+  --ctp-surface0: var(--gray-9);
+  --ctp-base: var(--gray-10);
+  --ctp-mantle: var(--gray-11);
+  --ctp-crust: var(--gray-12);
 }
 
 html {
@@ -49,7 +72,7 @@ html {
 .section-cursor {
   animation: blink 1.2s infinite;
   font-weight: 400;
-  color: var(--ctp-overlay1);
+  color: var(--text-dim);
 }
 
 body, p, a, li, span, div {
@@ -65,8 +88,8 @@ h1, h2, h3, h4 {
 }
 
 body {
-  background: var(--ctp-base);
-  color: var(--ctp-text);
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.7;
   font-size: 1rem;
   min-height: 100vh;
@@ -75,12 +98,12 @@ body {
 }
 
 a {
-  color: var(--ctp-overlay1);
+  color: var(--link);
   text-decoration: none;
   transition: color 0.2s;
 
   &:hover {
-    color: var(--ctp-text);
+    color: var(--link-hover);
   }
 }
 
@@ -107,17 +130,17 @@ header {
     font-weight: 700;
     line-height: 2.5rem;
     letter-spacing: -0.025em;
-      color: var(--ctp-maroon);
+      color: var(--text);
       text-decoration: none;
       margin-top: 1rem;
 
       &:hover {
-        color: var(--ctp-red);
+        color: var(--text-dim);
         text-decoration: none;
       }
 
       em {
-        font-style: italic;
+        font-weight: 700;
       }
     }
 
@@ -127,12 +150,12 @@ header {
     position: relative;
     top: -0.1em;
     margin-left: 1px;
-    color: var(--ctp-overlay1);
+    color: var(--text-dim);
   }
 
   .current-path {
     font-size: 0.875rem;
-    color: var(--ctp-overlay1);
+    color: var(--text-dim);
   }
 
   nav {
@@ -142,10 +165,10 @@ header {
 
     a {
       font-size: 0.875rem;
-      color: var(--ctp-overlay1);
+      color: var(--text-dim);
 
       &:hover {
-        color: var(--ctp-green);
+        color: var(--text-muted);
       }
     }
   }
@@ -160,16 +183,16 @@ main {
   .bio {
     font-size: 1rem;
     line-height: 1.5rem;
-    color: var(--ctp-subtext1);
+    color: var(--text-muted);
     margin-bottom: 2rem;
 
     a {
-      color: var(--ctp-blue);
+      color: var(--link);
       text-decoration: underline;
       text-underline-offset: 2px;
 
       &:hover {
-        color: var(--ctp-sapphire);
+        color: var(--link-hover);
       }
     }
   }
@@ -184,8 +207,8 @@ main {
 
   h2 {
     font-size: 1.125rem;
-    font-style: italic;
-    color: var(--ctp-lavender);
+    font-weight: 700;
+    color: var(--text);
   }
 }
 
@@ -193,13 +216,13 @@ main {
   h2 {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--ctp-blue);
+    color: var(--link);
     margin: 1.5rem 0 0.25rem;
   }
 
   p {
     font-size: 0.8rem;
-    color: var(--ctp-overlay1);
+    color: var(--text-dim);
     margin-bottom: 0.5rem;
   }
 
@@ -212,9 +235,9 @@ main {
     gap: 0.5rem;
 
     li {
-      border-left: 2px solid var(--ctp-surface0);
+      border-color: var(--border);
       padding-left: 0.75rem;
-      color: var(--ctp-subtext1);
+      color: var(--text-muted);
       font-size: 0.875rem;
       line-height: 1.6;
     }
@@ -227,18 +250,18 @@ main {
   .project-name {
     font-size: 1rem;
     font-weight: 600;
-    color: var(--ctp-mauve);
+    color: var(--text);
     margin-bottom: 0.5rem;
 
     .project-github {
       font-weight: 400;
       font-size: 0.875rem;
-      color: var(--ctp-overlay1);
+      color: var(--text-dim);
       text-decoration: none;
       margin-left: 0.5rem;
 
       &:hover {
-        color: var(--ctp-green);
+        color: var(--text-muted);
       }
     }
   }
@@ -246,22 +269,22 @@ main {
   .project-content {
     p {
       font-size: 0.875rem;
-      color: var(--ctp-subtext1);
+      color: var(--text-muted);
       margin-bottom: 0.5rem;
       line-height: 1.6;
     }
 
     strong {
-      color: var(--ctp-text);
+      color: var(--text);
     }
 
     a {
-      color: var(--ctp-blue);
+      color: var(--link);
       text-decoration: underline;
       text-underline-offset: 2px;
 
       &:hover {
-        color: var(--ctp-sapphire);
+        color: var(--link-hover);
       }
     }
 
@@ -274,9 +297,9 @@ main {
       gap: 0.5rem;
 
       li {
-        border-left: 2px solid var(--ctp-surface0);
+        border-color: var(--border);
         padding-left: 0.75rem;
-        color: var(--ctp-subtext1);
+        color: var(--text-muted);
         font-size: 0.875rem;
         line-height: 1.6;
       }
@@ -297,12 +320,12 @@ main {
 
   li {
     display: inline;
-    color: var(--ctp-subtext1);
+    color: var(--text-muted);
     font-size: 0.9rem;
 
     &::before {
       content: "* ";
-      color: var(--ctp-surface2);
+      color: var(--text-dim);
     }
   }
 }
@@ -310,15 +333,15 @@ main {
 .education-content {
   p {
     font-size: 0.875rem;
-    color: var(--ctp-subtext1);
+    color: var(--text-muted);
     margin-bottom: 0.5rem;
-    border-left: 2px solid var(--ctp-surface0);
+    border-color: var(--border);
     padding-left: 0.75rem;
     line-height: 1.5;
   }
 
   strong {
-    color: var(--ctp-text);
+    color: var(--text);
   }
 }
 
@@ -333,12 +356,12 @@ main {
   }
 
   li {
-    color: var(--ctp-subtext1);
+    color: var(--text-muted);
     font-size: 0.9rem;
 
     &::before {
       content: "→ ";
-      color: var(--ctp-surface2);
+      color: var(--text-dim);
     }
   }
 }
@@ -352,19 +375,19 @@ main {
   font-size: 0.9rem;
 
   li {
-    border-left: 2px solid var(--ctp-surface0);
+    border-color: var(--border);
     padding-left: 0.75rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
   }
 
   .edu-title {
-    color: var(--ctp-text);
+    color: var(--text);
     display: block;
   }
 
   .edu-meta {
-    color: var(--ctp-overlay1);
+    color: var(--text-dim);
     font-size: 0.8rem;
     display: block;
     margin-top: 0.15rem;
@@ -374,14 +397,14 @@ main {
 footer {
   margin-top: auto;
   padding-top: 1.5rem;
-  border-top: 1px solid var(--ctp-surface0);
+  border-color: var(--border);
   display: flex;
   justify-content: space-between;
   font-size: 0.8rem;
-  color: var(--ctp-overlay1);
+  color: var(--text-dim);
 
   .contact {
-    color: var(--ctp-subtext1);
+    color: var(--text-muted);
   }
 }
 
